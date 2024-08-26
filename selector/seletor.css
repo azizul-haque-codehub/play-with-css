@@ -100,3 +100,23 @@ button:disabled {
 input[type="checkbox"]:indeterminate {
 	background-color: rgb(195, 216, 6);
 }
+
+/* color ************** */
+.rgb,
+.hex,
+.hsl {
+	size: 30px;
+	width: 30px;
+	padding: 30px;
+	border-radius: 100%;
+}
+.rgb {
+	background-color: rgb(255, 0, 0);
+}
+
+.hex {
+	background-color: #f00;
+}
+.hsl {
+	background-color: hsl(325, 100%, 50%);
+}
