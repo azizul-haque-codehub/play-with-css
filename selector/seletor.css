@@ -1,0 +1,102 @@
+/** @format */
+
+/* simple selector */
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	padding: 50px;
+}
+.simple-class {
+	stroke: none;
+}
+#simple_id {
+	text-align: center;
+}
+
+/* combinator selector */
+
+/*descendant examples ****** */
+
+/* .parent p {
+	color: lightblue;
+}
+.parent div h5 {
+	color: red;
+} */
+
+/* child selector ************* */
+/* .parent > p {
+	color: rgb(255, 0, 179);
+}
+.parent > .child > p {
+	color: rgb(131, 8, 255);
+} */
+
+/* Adjacent Sibling Selector (+)  ******* */
+/* p + h4 {
+	color: green;
+} */
+/* h1 + p + h4 {
+	color: green;
+} */
+
+/* General Sibling Selector (~)  ******** */
+/* h2 ~ h1 {
+	color: orange;
+} */
+
+/* Pseudo-class Selector *******  */
+button {
+	padding: 10px;
+	border: 2px slateblue solid;
+}
+button:hover {
+	border: 2px rgb(205, 90, 100) solid;
+	color: rebeccapurple;
+}
+input {
+	padding: 14px;
+}
+input:focus {
+	border: 4px rgb(205, 90, 100) solid;
+	background-color: lightblue;
+	font-weight: bold;
+	shape-image-threshold: inherit;
+}
+
+li:nth-child(2) {
+	color: rgb(18, 1, 252);
+}
+
+p:nth-of-type(2) {
+	color: royalblue;
+}
+
+input[type="password"]:focus {
+	background-color: rgb(255, 0, 119);
+}
+
+button:disabled {
+	background-color: grey;
+}
+
+/* p:not(.intro) {
+	color: rgba(17, 186, 115, 0.847);
+} */
+
+#important::before {
+	content: "Note: ";
+	font-weight: bold;
+}
+#important::after {
+	content: "what's up";
+}
+#important::first-letter {
+	font-size: 200%;
+	color: red;
+}
+input[type="checkbox"]:indeterminate {
+	background-color: rgb(195, 216, 6);
+}
