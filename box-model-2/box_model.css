@@ -24,4 +24,8 @@
 	/* transition: 5s; */
 	box-sizing: border-box;
 	/* box-sizing: content-box; */
+
+	/* outline */
+	outline: 40px hotpink dashed;
+	border-radius: 20%;
 }
