@@ -1,0 +1,58 @@
+/** @format */
+
+h1 {
+	color: hsl(105, 98%, 41%);
+}
+/* height width explanation */
+.box-1 {
+	padding: 10px;
+	background-color: darkturquoise;
+	/* width: 500px; */
+	/* height: 500px; */
+	max-height: 500px;
+	/* max-width: 550px; */
+	/* overflow: hidden; */
+	overflow: auto;
+}
+
+.box-2 {
+	padding: 30px;
+	background-color: rgb(233, 2, 200);
+}
+
+.parent {
+	border: 3px dashed magenta;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+/* padding */
+
+.child-1 {
+	width: 50%;
+	padding: 20px;
+	background-color: aqua;
+}
+
+.child-2 {
+	width: 50%;
+	padding: 20px;
+	background-color: rgb(0, 34, 255);
+}
+.child-1-child {
+	width: 50%;
+	padding: 20px;
+	background-color: rgb(208, 0, 255);
+}
+
+/* border */
+
+.child-1 {
+	border-collapse: separate;
+	border-width: 8px;
+	/* border-color: rgb(255, 0, 0); */
+	border-style: solid;
+	border-image: url("../img/img.png");
+	border-image-width: 20px;
+	border-image-repeat: stretch;
+}

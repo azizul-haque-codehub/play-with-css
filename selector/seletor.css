@@ -14,6 +14,9 @@ body {
 #simple-id {
 	text-align: center;
 }
+#main__p{
+color: gainsboro !important;
+}
 [heading] {
 	color: #ff3bff;
 }
