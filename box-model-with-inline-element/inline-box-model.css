@@ -1,0 +1,36 @@
+/** @format */
+
+/* basic difference of box-model */
+.heading {
+	width: 200px;
+	padding: 20px;
+	border: 15px solid rebeccapurple;
+	background-color: hsl(120, 30%, 60%);
+}
+
+.html {
+	background-color: rgba(230, 0, 203, 0.727);
+}
+
+/* padding border margin with inline element and block element */
+
+.block {
+	background-color: hotpink;
+	border: 10px solid rosybrown;
+	margin: 20px;
+	padding: 20px;
+}
+.inline {
+	background-color: rgba(36, 5, 215, 0.486);
+	border: 10px solid rosybrown;
+	margin: 20px; /* sudu left and right (inline) ey apply hobe  */
+	padding: 60px;
+	/*
+    padding around kaj kore but like a absolute position , block element er upor cole jai
+    */
+}
+
+/* inline-block element */
+.inline-block {
+	display: inline-block;
+}
