@@ -1,0 +1,33 @@
+/** @format */
+
+body {
+	font-family: Arial, sans-serif; /* The font will be inherited */
+	color: blue; /* The color will be inherited */
+}
+
+p {
+	font-size: 18px; /* This will be inherited too */
+}
+
+.no-inherit {
+	color: red; /* This will override the inherited blue color */
+}
+li {
+	font-family: "Courier New", Courier, monospace; /* apply direct font family but not apply */
+}
+ol > li {
+	color: deeppink;
+	font-family: inherit; /* apply direct font family from parent */
+}
+
+
+/* This is a not-inheritance examples */
+div {
+    background-color: deepskyblue; /* This will NOT be inherited */
+    margin: 20px; /* This will NOT be inherited */
+  }
+  
+  p {
+    background-color: inherit;
+     /* Force inheritance */
+  }

@@ -1,0 +1,48 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Inheritance in css</title>
+		<link rel="stylesheet" href="inheritance.css" />
+	</head>
+	<body>
+		Inherited vs. Non-Inherited Properties Inherited Properties:
+		<h5>
+			Some CSS properties are automatically inherited by child elements, like:
+		</j>
+		<ol>
+			<li>color</li>
+			<li>font-family</li>
+			<li>line-height</li>
+			<li>text-align</li>
+		</ol>
+		Non-Inherited Properties: Other properties are not inherited by default,
+		like:
+		<ol>
+			<li>margin</li>
+			<li>
+				padding
+			</li>
+			<li>border</li>
+			<li>background color</li>
+		</ol>
+
+		<h1>This is a inheritance examples</h1>
+		<p>
+            This paragraph will inherit the font-family and color from the body
+			(parent).
+		</p>
+		<p class="no-inherit">
+			This paragraph will inherit the font-family, but its color is set to red.
+		</p>
+        
+        <div>
+            <h1>This is a not-inheritance examples</h1>
+            <p>This paragraph is inside a div, but the background color is not inherited.</p>
+            <p style="background-color: inherit;">This paragraph uses the `inherit` keyword to inherit the div's background color.</p>
+          </div>
+	</body>
+</html>

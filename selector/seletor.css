@@ -11,8 +11,19 @@ body {
 .simple-class {
 	stroke: none;
 }
-#simple_id {
+#simple-id {
 	text-align: center;
+}
+[heading] {
+	color: #ff3bff;
+}
+
+/*  specificity */
+[heading]  {
+	color: hsl(120, 80%, 60%);
+}
+[heading] {
+	color: hsl(34, 84%, 48%);
 }
 
 /* combinator selector */
