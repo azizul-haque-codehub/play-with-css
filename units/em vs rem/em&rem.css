@@ -5,9 +5,14 @@ html {
 }
 body {
 	font-size: 2em; /* 16 *2 = 32px */
+	border: 3px solid red;
+	padding: 1em;
+	margin: 1.5em;
 }
 main {
 	font-size: 2em; /* 32 *2 = 64px */
+	border: 3px solid green;
+	padding: 1.5em;
 }
 section {
 	font-size: 2em;
@@ -19,5 +24,5 @@ p {
 	font-size: 2em;
 }
 span {
-	font-size: 2em;
+	font-size: 2rem;
 }
