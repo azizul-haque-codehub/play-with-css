@@ -1,0 +1,19 @@
+/** @format */
+
+div {
+	position: relative;
+	background-color: hotpink;
+	border: 3px solid red;
+	top: 5px;
+}
+
+.css-element{
+    background-color: rgba(123, 62, 123, 0.77);
+    border: 3px solid red;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+    
+}
