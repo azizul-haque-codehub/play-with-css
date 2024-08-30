@@ -1,0 +1,23 @@
+/** @format */
+
+html {
+	font-size: 1em; /*16px */
+}
+body {
+	font-size: 2em; /* 16 *2 = 32px */
+}
+main {
+	font-size: 2em; /* 32 *2 = 64px */
+}
+section {
+	font-size: 2em;
+}
+div {
+	font-size: 2em;
+}
+p {
+	font-size: 2em;
+}
+span {
+	font-size: 2em;
+}
