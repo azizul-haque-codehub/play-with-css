@@ -20,14 +20,13 @@ ol > li {
 	font-family: inherit; /* apply direct font family from parent */
 }
 
-
 /* This is a not-inheritance examples */
 div {
-    background-color: deepskyblue; /* This will NOT be inherited */
-    margin: 20px; /* This will NOT be inherited */
-  }
-  
-  p {
-    background-color: inherit;
-     /* Force inheritance */
-  }
+	background-color: deepskyblue; /* This will NOT be inherited */
+	margin: 20px; /* This will NOT be inherited */
+}
+
+p {
+	background-color: inherit;
+	/* Force inheritance */
+}
