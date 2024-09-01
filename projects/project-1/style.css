@@ -9,9 +9,11 @@ body {
 }
 .card {
 	position: absolute;
-	margin: auto;
+	/* margin: auto; */
+
 	padding: 1rem;
-	inset: 0;
+	inset: 50%;
+    transform: translate(-50%,-50%);
 	width: 302px;
 	height: 470px;
 	border-radius: 16px;
@@ -22,3 +24,5 @@ img {
 	width: 100%;
 	border-radius: 10px;
 }
+
+/* 01409406489 */
