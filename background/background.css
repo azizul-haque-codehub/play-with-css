@@ -1,0 +1,33 @@
+/** @format */
+
+main {
+	padding: 50px;
+	background-color: royalblue;
+}
+section {
+	width: 500px;
+	height: 500px;
+	/* background-image: url("/img/coding.png") ,url("/img/img.png"),url("/img/coding.png");  multiple background img  */
+
+	/* background-image: url("/img/coding.png"); */
+	/* background-image: url("/img/coding.png") , linear-gradient(45deg, #ffcc00, #ff66cc),url("/img/img.png") ; */
+	background-blend-mode: overlay;
+	overflow-y: auto;
+	background-attachment: fixed;
+	background-repeat: space;
+	/* background-origin: content-box; */
+	background-position: center;
+	background-size: cover;
+	/* background-clip: content-box;
+    padding: 50px; */
+	/* background-clip: padding-box;
+    padding: 50px; */
+	/* background-clip: border-box;
+    border: 150px solid rgba(143, 188, 143, 0.373); */
+	border: 150px solid rgba(143, 188, 143, 0.373);
+	background-origin: content-box;
+	padding: 50px;
+    background-image: url('/img/coding.png'), linear-gradient(to bottom, rgba(228, 97, 219, 0.5), rgba(6, 226, 208, 0.782));
+    background-blend-mode: multiply;
+    color: white;
+}
