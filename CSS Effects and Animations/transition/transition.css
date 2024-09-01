@@ -1,0 +1,28 @@
+/** @format */
+
+div {
+	margin-top: 20px;
+	width: 300px;
+	height: 300px;
+	size: 300px;
+	border: 5px dotted dodgerblue;
+	/* transition: property duration timing-function delay; */
+	transition: transform 800ms cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+	transform: rotate(-5deg);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.box1:hover {
+	transform: scale(1.5) rotate(45deg);
+	cursor: pointer;
+}
+
+.box2:hover {
+	transform: scale(1.5) rotate(1turn);
+	cursor: pointer;
+}
+.box3:hover {
+	transform: rotate(1turn);
+	cursor: pointer;
+}
