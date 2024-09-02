@@ -1,0 +1,37 @@
+/** @format */
+* {
+	box-sizing: border-box;
+}
+.parent {
+	padding: 50px;
+	height: 50vh;
+	border: 4px solid salmon;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.parent span {
+	/* width: 400px; */
+	padding: 10px;
+	border: 4px solid hotpink;
+	/* flex-shrink: 1; by default */
+	/* flex-shrink: 0; 0 mean eta max-content er soman width nibe */
+	/* flex-grow: 1 ; flex-grow mean jodi parent er under a space take tahole space soho width pura hou */
+	flex-grow: 1;
+}
+.parent div {
+	padding: 10px;
+	border: 4px solid pink;
+	/* width: max-content; */
+	/* width: min-content; */
+}
+
+.div {
+	border: 4px solid khaki;
+	margin-top: 5rem;
+}
+div p {
+	border: 4px solid lightseagreen;
+}

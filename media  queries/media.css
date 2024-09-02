@@ -9,7 +9,44 @@ main {
 	-webkit-print-color-adjust: exact;
 }
 
-@media print {
+/* when we use print in media that's mean the first feature and second features will needed */
+
+@media print and (orientation: landscape) {
+	h1::after {
+		content: "now this landscape print";
+	}
+}
+/* @media print and (orientation: portrait) {
+	h1::after {
+		content: "now this portrait print";
+	}
+} */
+
+/* @media (min-width: 400px) and (max-width: 1000px) {
+	h1::after {
+		content: "now this laptop width mean 400px";
+	}
+} */
+
+/* @media (max-width: 400px) {
+	h1::after {
+		content: "now this mobile width mean 400px";
+	}
+} */
+/* @media screen and (800px > width > 400px) {
+	main {
+		border: 5px solid darkred;
+		background-color: teal;
+	}
+} */
+/* 
+@media screen and (width >400px) {
+	main{
+	border: 5px solid darkred;
+	}
+} */
+
+/* @media print {
 	main {
 		background-color: darkcyan;
 	}
@@ -19,4 +56,4 @@ main {
 	h1 {
 		color: darkorchid;
 	}
-}
+} */
