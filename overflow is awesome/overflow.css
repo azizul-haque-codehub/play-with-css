@@ -1,0 +1,13 @@
+/** @format */
+
+:root {
+	font-family: sans-serif;
+	/* overflow: hidden; */
+}
+
+h1 {
+	font-size: 4rem;
+	border: 4px solid;
+	overflow-x: auto; /* jokon overflow proyujon tokoni scroll bar cole asbe */
+    overflow-x: scroll; /* overflow holeo scroll bar takbe na holeo scroll bar takbe*/
+}
