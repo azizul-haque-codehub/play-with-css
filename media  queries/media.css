@@ -2,8 +2,21 @@
 
 main {
 	border: 4px solid salmon;
-    height: 30vh;
-    width: 80vw;
-    background-color: rgba(153, 50, 204, 0.577);
-    print-color-adjust: exact;
+	height: 30vh;
+	width: 80vw;
+	background-color: rgba(153, 50, 204, 0.577);
+	print-color-adjust: exact;
+	-webkit-print-color-adjust: exact;
+}
+
+@media print {
+	main {
+		background-color: darkcyan;
+	}
+	h1::before {
+		content: "Now this print able text";
+	}
+	h1 {
+		color: darkorchid;
+	}
 }
