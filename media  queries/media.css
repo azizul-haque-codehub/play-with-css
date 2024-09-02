@@ -1,0 +1,9 @@
+/** @format */
+
+main {
+	border: 4px solid salmon;
+    height: 30vh;
+    width: 80vw;
+    background-color: rgba(153, 50, 204, 0.577);
+    print-color-adjust: exact;
+}
