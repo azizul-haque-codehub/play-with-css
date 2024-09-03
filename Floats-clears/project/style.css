@@ -1,11 +1,12 @@
 /** @format */
 
-img {
+.first-img {
 	margin-right: 1rem;
-	width: 200px;
 	float: left;
 }
-
+img {
+	width: 200px;
+}
 .first-para {
 	/* background-color: deepskyblue; */
 }
