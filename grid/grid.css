@@ -1,0 +1,15 @@
+/** @format */
+
+.container {
+	background-color: lightseagreen;
+	height: 60vh;
+	display: grid;
+    /* custom size of grid items / layout */
+	/* grid-template-columns: 50px 50px 100px 20px 50px 150px 50px 50px 50px;
+	grid-template-rows: 50px 50px 150px; */
+
+
+    /* use repeat like pro coder */
+	grid-template-columns:repeat(5,50px) ;
+	grid-template-rows: 50px 50px;
+}
