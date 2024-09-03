@@ -28,7 +28,8 @@
 
 .box-3 {
 	background-color: blue;
-    /* float: left; */
+    float: none;
+	clear: left;
 }
 .box-3 img {
 	width: 100px;

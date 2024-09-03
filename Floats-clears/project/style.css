@@ -3,9 +3,9 @@
 img {
 	margin-right: 1rem;
 	width: 200px;
-	float: right;
+	float: left;
 }
 
 .first-para {
-	background-color: deepskyblue;
+	/* background-color: deepskyblue; */
 }
