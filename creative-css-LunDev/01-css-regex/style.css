@@ -1,0 +1,74 @@
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
+	column-gap: 10px;
+	row-gap: 3px;
+}
+.card {
+	width: 200px;
+	height: 200px;
+	border: 3px solid;
+	background: #f0f;
+	position: relative;
+}
+.new {
+	box-shadow: 0 0 30px 5px #002;
+}
+.new:not(.out):after {
+	content: "New";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: #0f0;
+	font-weight: 900;
+	font-size: 20px;
+}
+
+.seller:not(.out):before {
+	content: "Best Seller";
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	color: #0f0;
+	font-weight: 900;
+	font-size: 20px;
+}
+
+.out {
+	filter: grayscale(1);
+}
+.out::after {
+	content: "stock out";
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	color: #0f0;
+	font-weight: 900;
+	font-size: 20px;
+}
+
+.prioritize {
+	order: -1;
+}
+.prioritize::after {
+	content: "Prioritize";
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	color: #0f0;
+	font-weight: 900;
+	font-size: 20px;
+}
+
+div[class^="card"] {
+	background-color: #425;
+}
+
+div[class^="card"][class*="new"] {
+	background-color: red;
+}
+div[class^="card"][class*="new"][class$='prioritize'] {
+	background-color: rgb(0, 255, 102);
+}
