@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>The animation smoother king => Timing Function</title>
+		<style>
+			.box {
+				height: 205px;
+				width: 150px;
+				background-image: url(./image.png);
+				background-size: auto 100%;
+				border: 2px solid;
+				background-position: 0 100%;
+				animation: Go 1s steps(9) infinite;
+			}
+            @keyframes Go {
+                to {
+                    background-position: 100% 0;
+                   
+                }
+            }
+		</style>
+	</head>
+	<body>
+		<h1>The animation smoother king => Timing Function</h1>
+		<div class="box"></div>
+	</body>
+</html>
