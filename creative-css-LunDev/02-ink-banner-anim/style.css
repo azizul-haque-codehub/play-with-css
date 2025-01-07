@@ -1,0 +1,35 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-size: 1em;
+}
+
+.banner {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.title{
+    font-family: sans-serif;
+    font-size: 8em;
+}
+
+.banner::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url(../imgs/nature.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    mask-image:url(../imgs/me.jpg) ;
+    mask-size: cover;
+    mask-position: center;
+    
+}
