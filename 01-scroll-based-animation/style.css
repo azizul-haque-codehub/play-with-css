@@ -1,0 +1,37 @@
+* {
+	/* border: 2px solid lime; */
+	box-sizing: border-box;
+}
+
+.scroll-watcher {
+	height: 10px;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	background-color: lime;
+	z-index: 1;
+	scale: 0 1;
+	transform-origin: left;
+	animation: scroll-watcher linear backwards;
+	animation-timeline: scroll();
+}
+@keyframes scroll-watcher {
+	to {
+		scale: 1 1;
+	}
+}
+.header {
+	min-height: 100vh;
+	position: relative;
+	border: 2px solid lime;
+	background-image: url("./header-bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

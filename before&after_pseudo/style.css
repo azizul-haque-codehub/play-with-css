@@ -1,0 +1,31 @@
+/* Make Css console */
+* {
+	border: 2px solid lime;
+}
+/* we need also need for css content */
+*::before,
+::after {
+	border: 2px solid rgb(255, 30, 0);
+}
+
+h2::after {
+	content: " for write content by css";
+}
+h2::before {
+	content: "Cool thing of CSS ";
+}
+
+.box {
+	width: min(200px);
+	height: min(200px);
+	margin: 10mm;
+	position: absolute;
+}
+.box::before {
+	content: "20";
+	width: 100%;
+	height: 20%;
+	display: inline-block;
+	position: absolute;
+    top: 30px;
+}
