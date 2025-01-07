@@ -1,0 +1,32 @@
+input {
+	outline: none;
+	display: block;
+	border: 2px solid #002;
+	padding: 10px;
+	position: relative;
+}
+/* input::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    width: 20px;
+    height: 12px;
+    border-style: solid;
+    border-top: 0;
+    border-right: 0;
+    border-width: 5px;
+    border-color: green;
+    rotate: -45deg;
+    ;
+
+} */
+
+input:invalid:not(:placeholder-shown) {
+	border: 2px solid red;
+}
+
+input:valid:not([type="submit"]) {
+	border: 2px solid #0f0;
+}
