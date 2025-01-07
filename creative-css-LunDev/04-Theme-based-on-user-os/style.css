@@ -1,0 +1,23 @@
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px 20px;
+}
+.card {
+	width: 200px;
+	height: 200px;
+	border: 2px solid;
+}
+
+/* tradintional way to set os theme */
+/* this is media query so we need to apply style line by line */
+@media (prefers-color-scheme: dark) {
+	.container {
+		color: #fff;
+		background: #004;
+	}
+	.card {
+		border: 1px dashed plum;
+		padding: 10px;
+	}
+}
