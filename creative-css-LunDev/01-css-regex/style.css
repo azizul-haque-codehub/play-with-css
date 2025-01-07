@@ -6,13 +6,13 @@
 	column-gap: 10px;
 	row-gap: 3px;
 }
-.card {
+/* .card {
 	width: 200px;
 	height: 200px;
 	border: 3px solid;
 	background: #f0f;
 	position: relative;
-}
+} */
 .new {
 	box-shadow: 0 0 30px 5px #002;
 }
@@ -63,12 +63,20 @@
 }
 
 div[class^="card"] {
-	background-color: #425;
+	/* background-color: #425; */
+	width: 200px;
+	height: 200px;
+	border: 3px solid;
+	background: #f0f;
+	position: relative;
 }
 
 div[class^="card"][class*="new"] {
-	background-color: red;
+	background-color: rgb(0, 255, 26);
 }
-div[class^="card"][class*="new"][class$='prioritize'] {
-	background-color: rgb(0, 255, 102);
+div[class^="card"][class*="new"][class*='seller'] {
+	background-color: rgb(38, 0, 255);
+}
+div[class^="card"][class$='prioritize'] {
+	background-color: rgb(255, 0, 81);
 }
