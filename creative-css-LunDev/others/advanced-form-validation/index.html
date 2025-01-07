@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Form Validation</title>
+	</head>
+	<style>
+		form div {
+			margin-block: 4px;
+			& input {
+				display: block;
+			}
+		}
+		.error {
+			color: red;
+		}
+	</style>
+	<body>
+		<h3>Advanced way to validate form</h3>
+		<form id="form">
+			<div>
+				Name <input name="name" type="text" />
+				<p class="name error"></p>
+			</div>
+			<div>
+				Age<input name="age" type="text" />
+				<p class="age error"></p>
+			</div>
+			<div><input type="submit" value="Submit" /></div>
+		</form>
+		<script>
+			const form = document.querySelector("#form");
+			const nameError = document.querySelector(".name");
+			const ageError = document.querySelector(".age");
+			form.onsubmit = (event) => {
+				event.preventDefault();
+				const form = new FormData(event.target);
+				const name = form.get("name");
+				const age = form.get("age");
+				const details = { name, age };
+				const isErrors = validateForm(details);
+				if (isErrors) {
+					Object.entries(isErrors).forEach(([key, value]) => {
+						if (key === "name") {
+							nameError.textContent = value;
+						} else if (key === "age") {
+							ageError.textContent = value;
+						}
+					});
+					// isValidDetails.name
+					// 	? (nameError.textContent = isValidDetails.name)
+					// 	: "";
+					// isValidDetails.age
+					// 	? (ageError.textContent = isValidDetails.age)
+					// 	: "";
+
+					return;
+				}
+			};
+
+			function validateForm(data) {
+				const validationRules = {
+					name: [
+						{ required: true, message: "This Field is Required" },
+						{ minLen: 5, message: "Min character length 5" },
+					],
+					age: [
+						{ required: true, message: "This Field is Required" },
+						{ minLen: 2, message: "Min character length 2" },
+					],
+				};
+				const errMsg = {};
+				Object.entries(data).forEach(([dataKey, dataValue]) => {
+					validationRules[dataKey].some((rule) => {
+						if (rule.required && !dataValue.length) {
+							errMsg[dataKey] = rule.message;
+							return true;
+						} else if (dataValue.length < rule.minLen) {
+							errMsg[dataKey] = rule.message;
+							return true;
+						}
+					});
+				});
+				return Object.values(errMsg).length ? errMsg : false;
+			}
+		</script>
+	</body>
+</html>
