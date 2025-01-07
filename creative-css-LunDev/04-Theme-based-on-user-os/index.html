@@ -7,6 +7,10 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
+		<div class="theme">
+			<span>Dark</span>
+			<span>Light</span>
+		</div>
 		<div class="container">
 			<div class="card">
 				<p>
@@ -36,5 +40,12 @@
 			</div>
 			<div class="card"></div>
 		</div>
+		<script>
+			const toggler = document.querySelector(".theme");
+			toggler.onclick = () => {
+				toggler.classList.toggle("active");
+				document.querySelector(':root').classList.toggle("dark");
+			};
+		</script>
 	</body>
 </html>

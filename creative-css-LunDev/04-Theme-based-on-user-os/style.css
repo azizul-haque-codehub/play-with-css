@@ -22,22 +22,72 @@ this is media query so we need to apply style line by line
 	}
 } */
 
-
- /* new way  */
- :root{
-    color-scheme: light dark;
- }
+/* new way  */
+/* :root {
+	color-scheme: light dark;
+}
 .container {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 10px 20px;
-    color: light-dark(#fff,#002);
-    background-color: light-dark(#002,#fff);
+	color: light-dark(#fff, #002);
+	background-color: light-dark(#002, #fff);
 }
 .card {
-    width: 200px;
+	width: 200px;
+	height: 200px;
+	border: 2px solid;
+} */
+
+/* by user control */
+:root {
+	--color: #002;
+	--background-color: #fff;
+}
+:root.dark {
+	--color: #fff;
+	--background-color: #004;
+}
+body {
+	color: var(--color);
+	background-color: var(--background-color);
+}
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px 20px;
+}
+.card {
+	width: 200px;
 	height: 200px;
 	border: 2px solid;
 }
 
+.theme {
+	width: 100px;
+	height: 20px;
+	border: 2px solid;
+	position: relative;
+	overflow: hidden;
+	padding: 10px;
+}
 
+.theme span {
+	position: absolute;
+	inset: 0;
+	display: grid;
+	place-content: center;
+	transition: 0.5s;
+	background: lightblue;
+}
+.theme.active span:nth-child(1) {
+	transform: translateY(-100%);
+	background-color: plum;
+}
+.theme.active span:nth-child(2) {
+	transform: translateY(0);
+}
+.theme span:nth-child(2) {
+	transform: translateY(100%);
+	background-color: #fff;
+}
