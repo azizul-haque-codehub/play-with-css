@@ -7,53 +7,65 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<h2>Variable in css</h2>
-		<p>
-			In CSS, variable mean not other than like Programming language ,<br />
-			In css , variable also contain css property value like <br />
-			syntax : --variable-name : value <b>or</b> <br> @property --variable-name{
-                prop:value
-            } <br />
-			<code>--primary-text: #f0f</code>
-		</p>
-		<div>
-			<h3>Disadvantage of --variable in css</h3>
-			<ol>
-				<li>
-					<strong>
-						Inheritance cannot be prevented <br />for example: <br />
-					</strong>
-					<code>
-						:root { --box-bg: #003; } <br />
-						body { --box-bg: #0f0; } <br />
-						main{ --box-bg: red; } <br />.box { width: 200px; height: 200px;
-						border: 2px solid; <br />background-color: var(--box-bg);<br />
-						border-radius: 5px; }</code
-					>
+		<main>
+			<h2>Variable in css</h2>
+			<p>
+				In CSS, variable mean not other than like Programming language ,<br />
+				In css , variable also contain css property value like <br />
+				syntax : --variable-name : value <b>or</b> <br />
+				@property --variable-name{ prop:value } <br />
+				<code>--primary-text: #f0f</code>
+			</p>
+			<div>
+				<h3>Disadvantage of --variable in css</h3>
+				<ol>
+					<li>
+						<strong>
+							Inheritance cannot be prevented <br />for example: <br />
+						</strong>
+						<code>
+							:root { --box-bg: #003; } <br />
+							body { --box-bg: #0f0; } <br />
+							main{ --box-bg: red; } <br />.box { width: 200px; height: 200px;
+							border: 2px solid; <br />background-color: var(--box-bg);<br />
+							border-radius: 5px; }</code
+						>
+						<br />
+						<b style="color: red"> here box bg will be red not from above </b>
+					</li>
+					<li>
+						<strong>
+							Variable value can be reassign and set any others value <br />for
+							example: <br />
+						</strong>
+						<code>
+							:root { --box-bg: #003; } <br />
+							body { --box-bg: #0f0; } <br />
+							div{ --box-bg: 0.5; } <br />.box { width: 200px; height: 200px;
+							border: 2px solid; <br />background-color: var(--box-bg);<br />
+							border-radius: 5px; }</code
+						>
+						<br />
+						<b style="color: red">
+							here box bg will be 0.5 which are not formal value of bg
+						</b>
+					</li>
+				</ol>
+			</div>
+			<div>
+				[
+				<h3>Usage of @property at rule in css</h3>
+				<code>
+					syntax: <br />
+					@property --variable-name {
 					<br />
-					<b style="color: red;"> here box bg will be red not from above </b>
-				</li>
-				<li>
-					<strong>
-						Variable value can be reassign and set any others value <br />for example: <br />
-					</strong>
-					<code>
-						:root { --box-bg: #003; } <br />
-						body { --box-bg: #0f0; } <br />
-						div{ --box-bg: 0.5; } <br />.box { width: 200px; height: 200px;
-						border: 2px solid; <br />background-color: var(--box-bg);<br />
-						border-radius: 5px; }</code
-					>
-					<br />
-					<b style="color: red;"> here box bg will be 0.5 which are not formal value of bg </b>
-				</li>
-				
-			</ol>
-		</div>
-        <div>[
-            <h3>Usage of @property at rule in css</h3>
-        </div>
-		<div class="box"></div>
-		<div class="box2"></div>
+					syntax:"color" <br />
+					inherits:boolean <br />
+					initial-value:red }
+				</code>
+			</div>
+			<div class="box"></div>
+			<div class="box2"></div>
+		</main>
 	</body>
 </html>

@@ -19,7 +19,7 @@ div.box2 {
 	background: var(--box-bg);
 	padding: 10px;
 } */
-:root {
+/* :root {
 	--box-bg: #003;
 }
 body {
@@ -37,6 +37,30 @@ div{
 	border-radius: 5px;
 }
  
+div.box2 {
+	background: var(--box-bg);
+	padding: 10px;
+} */
+
+@property --box-bg {
+	syntax: "*";
+	inherits: true;
+	initial-value: plum;
+}
+body {
+	--box-bg: red;
+}
+main {
+	--box-bg: lime;
+}
+.box {
+	width: 200px;
+	height: 200px;
+	border: 2px solid;
+	background-color: var(--box-bg);
+	border-radius: 5px;
+}
+
 div.box2 {
 	background: var(--box-bg);
 	padding: 10px;
