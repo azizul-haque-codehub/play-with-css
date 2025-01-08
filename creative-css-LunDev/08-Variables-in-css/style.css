@@ -1,3 +1,21 @@
-@property --position {
-    syntax: 'width';
+:root {
+	--box-bg: #003;
+}
+body {
+	--box-bg: #0f0;
+}
+.box {
+	--box-bg: #ff1;
+	width: 200px;
+	height: 200px;
+	border: 2px solid;
+	background-color: var(--box-bg);
+	border-radius: 5px;
+}
+section {
+	--box-bg: red;
+}
+div.box2 {
+	background: var(--box-bg);
+	padding: 10px;
 }
