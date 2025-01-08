@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Generate rotated border and conic-gradient</title>
+		<style>
+			body {
+				color: white;
+			}
+
+			.box {
+				width: 300px;
+				height: 300px;
+				background-color: #003;
+				border-radius: 5px;
+				color: inherit;
+				position: relative;
+				padding: 10px;
+				margin-inline: auto;
+                transition: all 0.3s;
+                user-select: none;
+			}
+			@property --borderAngle {
+				syntax: "<angle>";
+				inherits: false;
+				initial-value: 0deg;
+			}
+			.box::before,
+			.box::after {
+				content: "";
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				box-sizing: unset;
+				top: 50%;
+				left: 50%;
+				translate: -50% -50%;
+				/* inset: 0; */
+				background: #000;
+				border-radius: inherit;
+				background-image: conic-gradient(from var(--borderAngle), #f0f, #00f,red);
+				padding: 5px;
+				z-index: -1;
+			}
+			.box:hover:after {
+				animation: rotatedBorder 3s linear infinite;
+			}
+			.box::before {
+				filter: blur(10px);
+			}
+			@keyframes rotatedBorder {
+				100% {
+					--borderAngle: 360deg;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h3>Awesome usage of css variable</h3>
+		<div class="box">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, illum.
+		</div>
+	</body>
+</html>
