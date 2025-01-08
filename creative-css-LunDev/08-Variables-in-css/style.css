@@ -43,15 +43,15 @@ div.box2 {
 } */
 
 @property --box-bg {
-	syntax: "*";
-	inherits: true;
+	syntax: "<color>";
+	inherits: false;
 	initial-value: plum;
 }
 body {
 	--box-bg: red;
 }
 main {
-	--box-bg: lime;
+	--box-bg: 10px;
 }
 .box {
 	width: 200px;
