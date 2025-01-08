@@ -61,7 +61,7 @@ main {
 	border-radius: 5px;
 	position: relative;
 	transition: 0.5s;
-    margin-inline: auto;
+	margin-inline: auto;
 }
 
 @property --angle {
@@ -90,6 +90,7 @@ main {
 		#0ff
 	);
 	padding: 5px;
+	box-sizing: unset;
 	animation: autoRotate 1s linear infinite;
 }
 .box::before {
