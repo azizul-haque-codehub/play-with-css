@@ -1,0 +1,20 @@
+.box {
+	width: 200px;
+	height: 200px;
+    border: 2px solid lime;
+    background: #004;
+}
+
+.container{
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+}
+
+.container:hover .box:not(:hover){
+    border-style: dashed;
+    filter: grayscale(1);
+}
+.box:hover{
+    scale: 1.4;
+}
