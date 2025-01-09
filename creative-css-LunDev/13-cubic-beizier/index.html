@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cubic Beizier</title>
+		<style>
+			.list {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				display: flex;
+                align-items: center;
+				--item-width: 150px;
+			}
+			.item {
+				width: var(--item-width);
+				filter: grayscale(1);
+				& img {
+					width: 100%;
+				}
+				transition: all 0.3s cubic-bezier(.19,.73,.94,.56);
+			}
+			.item:hover {
+                filter: none;
+                width: calc(var(--item-width) + 50px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="list">
+			<div class="item"><img src="../imgs/logos/logo-1.webp" alt="" /></div>
+			<div class="item"><img src="../imgs/logos/logo-2.webp" alt="" /></div>
+			<div class="item"><img src="../imgs/logos/logo-3.webp" alt="" /></div>
+			<div class="item"><img src="../imgs/logos/logo-4.webp" alt="" /></div>
+			<div class="item"><img src="../imgs/logos/logo-5.webp" alt="" /></div>
+		</div>
+	</body>
+</html>
