@@ -10,6 +10,7 @@
 	position: relative;
 }
 .slider .list .item {
+	 
 	width: var(--width);
 	height: var(--height);
 	position: absolute;
