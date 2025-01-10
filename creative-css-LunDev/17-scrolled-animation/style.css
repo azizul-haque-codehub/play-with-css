@@ -1,0 +1,116 @@
+h1 {
+	text-align: center;
+}
+h2 {
+	text-align: center;
+	font-size: 3em;
+}
+header {
+	min-height: 60vh;
+}
+
+.box {
+	width: 150px;
+	height: 150px;
+	border: 2px solid;
+	margin-left: -50px;
+	position: relative;
+	background-color: lime;
+}
+@property --rotateAngle {
+	syntax: "<angle>";
+	inherits: false;
+	initial-value: 0deg;
+}
+.box::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	border-radius: inherit;
+	top: 50%;
+	left: 50%;
+	z-index: -2;
+	background-color: rebeccapurple;
+	transform: translate(-50%, -50%) scale(1.1);
+	background-image: conic-gradient(
+		from var(--rotateAngle),
+		rgb(0, 255, 132),
+		#00f,
+		#f0f
+	);
+	animation: AutoRotation 2s linear infinite;
+}
+@keyframes AutoRotation {
+	100% {
+		--rotateAngle: 360deg;
+	}
+}
+
+.masonry {
+	columns: 3 30px;
+}
+.figure img {
+	width: 100%;
+}
+
+.logo-list {
+	width: 80%;
+	margin-inline: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	margin-bottom: 1000px;
+	& img {
+		width: 100%;
+	}
+}
+
+.autoRotate {
+	animation: AutoRoateAnim both;
+	animation-timeline: view();
+}
+
+@keyframes AutoRoateAnim {
+	0% {
+		transform: rotate(0deg);
+		border-radius: 0px;
+	}
+	100% {
+		transform: rotate(360deg);
+		border-radius: 8px;
+	}
+}
+
+.autoShow {
+	animation-name: autoShowAnim;
+	animation-timeline: view();
+	transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+@keyframes autoShowAnim {
+	0% {
+		opacity: 0;
+		transform: translateY(200px) scale(0.3);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+.autoBlur {
+	animation: autoBlurAnim both;
+	animation-timeline: view();
+}
+
+@keyframes autoBlurAnim {
+	0% {
+		filter: blur(30px);
+	}
+	40%,
+	60% {
+		filter: blur(0px);
+	}
+	100% {
+		filter: blur(30px);
+	}
+}
