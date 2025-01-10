@@ -1,0 +1,22 @@
+.box {
+	width: 200px;
+	height: 200px;
+	border: 2px solid;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+@supports not (grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))) {
+	.wrapper {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@supports (display: flex) {
+	.wrapper {
+		display: flex;
+	}
+}
