@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D cube</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="scene">
+        <div class="cube">
+          <div class="cube__face cube__face--front">front</div>
+          <div class="cube__face cube__face--back">back</div>
+          <div class="cube__face cube__face--right">right</div>
+          <div class="cube__face cube__face--left">left</div>
+          <div class="cube__face cube__face--top">top</div>
+          <div class="cube__face cube__face--bottom">bottom</div>
+        </div>
+      </div>
+      <p>
+        <label>
+          perspective
+          <input class="perspective-range" type="range" min="1" max="1000" value="400" data-units="px" />
+        </label>
+      </p>
+      <p>
+        <label>
+          perspective-origin x
+          <input class="origin-x-range" type="range" min="0" max="100" value="50" data-units="%" />
+        </label>
+      </p>
+      <p>
+        <label>
+          perspective-origin y
+          <input class="origin-y-range" type="range" min="0" max="100" value="50" data-units="%" />
+        </label>
+      </p>
+      <p>
+        <label>
+          Spin cube
+          <input class="spin-cube-checkbox" type="checkbox" />
+        </label>
+      </p>
+      <p>
+        <label>
+          Backface visible
+          <input class="backface-checkbox" type="checkbox" checked />
+        </label>
+      </p>
+</body>
+</html>
