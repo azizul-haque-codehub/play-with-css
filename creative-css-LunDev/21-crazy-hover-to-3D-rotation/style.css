@@ -1,0 +1,53 @@
+body {
+	margin: 0;
+}
+header h2 {
+	margin: 0;
+	font-size: 3em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.banner {
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+}
+
+.banner .product {
+	width: 500px;
+	height: 500px;
+	/* background: red; */
+	position: absolute;
+	bottom: 170px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+	transition: 0.7s;
+	--left: 0px;
+	display: flex;
+}
+
+.banner .product .soda {
+	background: var(--url) var(--left) 0, url(imgs/mockup.png);
+	background-size: auto 100%;
+	width: 250px;
+	/* height: 500px; */
+	aspect-ratio: 2 / 4;
+	background-blend-mode: multiply;
+	mask-image: url(imgs/mockup.png);
+	mask-size: auto 100%;
+	transition: 0.7s ease-in-out;
+	position: absolute;
+}
+.banner .product:hover {
+	--left: -1000px;
+	transform: translateX(-50%) translateY(-120px);
+}
+
+.product .soda:nth-child(2){
+    opacity: 0;
+}
+.product:hover .soda:nth-child(2){
+    opacity: 1;
+}
