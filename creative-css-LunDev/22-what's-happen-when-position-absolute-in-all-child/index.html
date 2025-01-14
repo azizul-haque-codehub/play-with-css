@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>
+			what's happen when all child element set position absolute in a parent
+		</title>
+	</head>
+	<body>
+		<style>
+			.parent {
+				position: relative;
+			}
+			.child {
+				width: 200px;
+				aspect-ratio: 2 / 2;
+				border: 2px solid;
+				font-size: 3em;
+				position: absolute;
+			}
+			.child:nth-child(even) {
+				text-align: end;
+			}
+			.child:nth-child(2) {
+				text-align: end;
+                z-index: -1;
+                background: greenyellow;
+			}
+            .child:nth-last-child(1){
+                text-align: center;
+                z-index: -1;
+                background: #000;
+            }
+		</style>
+		<h3>
+			what's happen when all child element set position absolute in a parent
+		</h3>
+		<div class="parent">
+			<div class="child">1</div>
+			<div class="child">2</div>
+			<div class="child">3</div>
+			<div class="child">4</div>
+			<div class="child">5</div>
+		</div>
+	</body>
+</html>
