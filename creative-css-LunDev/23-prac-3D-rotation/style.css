@@ -1,0 +1,49 @@
+body {
+	min-height: 100vh;
+	background: repeating-radial-gradient(#f0f, #9198e5 30%);
+	backdrop-filter: blur(5px);
+}
+h1 {
+	text-align: center;
+	font-size: 4em;
+}
+.container {
+	height: 80vh;
+	/* overflow: hidden; */
+	position: relative;
+}
+.soda-container {
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	--left: 0px;
+    transition: 0.7s;
+    display: flex;
+}
+.soda {
+	width: 400px;
+	aspect-ratio: 2 / 2;
+	background: var(--url) var(--left) 0, url(images/mockup.png);
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-blend-mode: multiply;
+	mask-image: url(images/mockup.png);
+	mask-size: auto 100%;
+	mask-repeat: no-repeat;
+	position: absolute;
+	transition: 0.7s;
+}
+
+.soda-container:hover {
+    --left: -1000px;
+    transform: translateX(-50%) translateY(-100px);
+}
+.soda:nth-child(2) {
+	opacity: 0;
+}
+.soda-container:hover .soda:nth-child(2) {
+    opacity: 1;
+}
